@@ -6,7 +6,7 @@
 <section class="main center">
 
     <div class="dropDowns">
-    <div class="dropDownMenuTitle menuTitle">
+    <div class="dropDownMenuTitle menuTitle featureTitle1">
         1. Hybrid design - Sport-functional / urban-style cross over design
       <p style="text-align: right; font-size:24px;">+</p>
     </div>
@@ -17,7 +17,7 @@
       </ul>
     </div>
   
-    <div class="dropDownMenuTitle menuTitle">
+    <div class="dropDownMenuTitle menuTitle featureTitle2">
         2. Hybrid design - Sport-functional / urban-style cross over design
         <p style="text-align: right; font-size:24px;">+</p>
     </div>
@@ -191,9 +191,12 @@
 
     </div>
     <div class="imagesRight">
+      <div style="width:500px;">
     <img class="imageTop" src="https://media.istockphoto.com/photos/male-coat-isolated-on-the-white-picture-id163208487?k=20&m=163208487&s=612x612&w=0&h=TZ5XnBejf_EAnGjMPfsRf3zu-8G9DYHIFyTiyrnwFms=" />
+    <div style="width:500px;">
+      <img class="imageBottom" src="https://thumbs.dreamstime.com/b/bald-man-sport-red-jacket-zipper-young-isolated-white-background-39968371.jpghttps://thumbs.dreamstime.com/b/bald-man-sport-red-jacket-zipper-young-isolated-white-background-39968371.jpg" />
+  </div>
 
-    <img class="imageBottom" src="https://thumbs.dreamstime.com/b/bald-man-sport-red-jacket-zipper-young-isolated-white-background-39968371.jpghttps://thumbs.dreamstime.com/b/bald-man-sport-red-jacket-zipper-young-isolated-white-background-39968371.jpg" />
 </div>
 </section>
   <!--main-->
@@ -221,23 +224,10 @@ body {
   max-width: 100%;
   padding: 20px 2%;
   display: flex;
-
-
-  
 }
 .dropDowns{
     width: 100%;
-
 }
-.imageTop{
-    width: 100%;
-    height: 30%;
-    padding: 40px 40px 40px 40px;
-}
-.imageBottom{
-    padding: 40px 40px 40px 40px;
-}
-
 
 .rotate {
   transform: rotate(180deg);
@@ -269,7 +259,6 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid;
 }
-
 i {
   transition: 500ms;
 }
@@ -301,6 +290,13 @@ i {
   font-weight: lighter;
 }
 
+img{
+  max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+    padding: 40px 40px 40px 40px;
+}
+
 </style>
 
 <script type="text/javascript">
@@ -308,10 +304,31 @@ $(function () {
   toggleMenu();
 
   function toggleMenu() {
-    $(".menuTitle").click(function () {
+
+    //example of drop down and image change for feature 1
+    $(".featureTitle1").click(function () {
+
       $(this).children().toggleClass("rotate");
       $(this).next().slideToggle();
+      $(".imageTop").attr("src","https://www.brother2brother.co.uk/images/blue-black-puffer-jacket-p24109-66405_zoom.jpg")
+      $(".imageBottom").attr("src","https://images.asos-media.com/products/asos-actual-bomber-varsity-jacket-in-navy/21187537-1-blue?$n_640w$&wid=513&fit=constrain")
+
     });
+
+    //example of drop down and image change for feature 
+    $(".featureTitle2").click(function () {
+
+$(this).children().toggleClass("rotate");
+$(this).next().slideToggle();
+$(".imageTop").attr("src","https://media.istockphoto.com/photos/male-coat-isolated-on-the-white-picture-id163208487?k=20&m=163208487&s=612x612&w=0&h=TZ5XnBejf_EAnGjMPfsRf3zu-8G9DYHIFyTiyrnwFms=")
+$(".imageBottom").attr("src","https://thumbs.dreamstime.com/b/bald-man-sport-red-jacket-zipper-young-isolated-white-background-39968371.jpghttps://thumbs.dreamstime.com/b/bald-man-sport-red-jacket-zipper-young-isolated-white-background-39968371.jpg")
+
+});
   }
 });
+
+
+
+
+
 </script>
